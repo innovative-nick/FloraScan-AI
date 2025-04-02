@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florascan AI | Plant Identification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="leaf">🌿</span>
+            <h1>Florascan <span class="ai">AI</span></h1>
+        </div>
+        <h2>Identify plants with artificial intelligence</h2>
+        
+        <div class="button-group">
+            <button class="btn" id="uploadBtn">
+                <i class="fas fa-upload"></i> Upload Photo
+            </button>
+            <button class="btn" id="cameraBtn">
+                <i class="fas fa-camera"></i> Take Picture
+            </button>
+        </div>
+        
+        <input type="file" id="fileInput" accept="image/*">
+        
+        <div class="image-container">
+            <video id="cameraView" autoplay playsinline></video>
+            <button class="btn" id="captureBtn">
+                <i class="fas fa-camera"></i> Capture Photo
+            </button>
+            <img id="plantImage" src="" alt="Identified plant">
+        </div>
+        
+        <div class="error" id="errorMessage"></div>
+        
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Identifying plant...</p>
+        </div>
+        
+        <div class="results" id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
